@@ -48,8 +48,7 @@ POWERLEVEL9K_VCS_BRANCH_ICON=$'\uF126'
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='deepskyblue1'
 POWERLEVEL9K_DIR_HOME_BACKGROUND='deepskyblue1'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='deepskyblue1'
-POWERLEVEL9K_DIR_ETC_FOREGROUND='deepskyblue1'
-POWERLEVEL9K_DIR_ETC_BACKGROUND='red3'
+POWERLEVEL9K_DIR_ETC_BACKGROUND='deepskyblue1'
 
 ## battery segment config
 POWERLEVEL9K_BATTERY_VERBOSE=false
@@ -57,14 +56,17 @@ POWERLEVEL9K_BATTERY_STAGES=($'\uf244 ' $'\uf243 ' $'\uf243 ' $'\uf243 ' $'\uf24
 POWERLEVEL9K_BATTERY_LEVEL_BACKGROUND=(red orangered1 darkorange orange1 gold1 yellow1 seagreen2 green3)
 POWERLEVEL9K_BATTERY_LOW_FOREGROUND=white
 POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND=black
-POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND=red
+POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND=black
 POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=black
 
 ## custom "charging" icon if connected to AC power
 zsh_charging_icon(){
-  local icon='\uF588' ## from NerdFonts
-  if [[ $(pmset -g ps | head -1) =~ "AC Power" ]]; then
-    echo -n $icon
+  local charging='\uF588' ## from NerdFonts
+  local charged='\uF584'
+  if [[ $(pmset -g ps | grep charged) =~ "charged" ]]; then
+    echo -n $charged
+  elif [[ $(pmset -g ps | head -1) =~ "AC Power" ]]; then
+    echo -n $charging
   fi
 }
 POWERLEVEL9K_CUSTOM_CHARGING_ICON_BACKGROUND="black"
