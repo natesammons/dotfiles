@@ -8,8 +8,6 @@
 
 ![iTerm Screenshot](.doc/iterm_screenshot.png "iTerm Screenshot")
 
-![zsh colors](.doc/zsh_colors.png "zsh colors")
-
 
 # 1. Clone This Repo To Your Home Directory
 
