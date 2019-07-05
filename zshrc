@@ -22,7 +22,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ###############################################################################
 ## Use PowerLevel9K theme
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ## view colors
 # getColorCode background

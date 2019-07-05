@@ -111,14 +111,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 This will nuke your `.zshrc` so don’t make changes before installing it.  Run through the wizard and select the defaults.
 
 
-### Install the `powerlevel9k` theme for `zsh`
+### Install the `powerlevel10k` theme for `zsh`
 
-[https://github.com/bhilburn/powerlevel9k](https://github.com/bhilburn/powerlevel9k)
+[https://github.com/romkatv/powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ```
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 ```
-
+Powerlevel10K is a [Powerlevel9k](https://github.com/bhilburn/powerlevel9k) re-implementation
+that is a lot faster.
 
 # 6. Install `Vundle` plugin for `vim`
 
