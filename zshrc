@@ -21,7 +21,7 @@ fpath=(
 export ZSH="$HOME/.oh-my-zsh"
 
 ###############################################################################
-## Use PowerLevel9K theme
+## Use PowerLevel10k theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ## view colors
