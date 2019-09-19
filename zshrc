@@ -154,4 +154,12 @@ unalias ls
 alias ls='ls --color=auto -CF'
 alias ll='ls --color=auto -CFlh'
 
+## run local bits if there's a ~/.zsh directory
+if [[ -d $HOME/.zsh  ]]; then
+	for file in $(find $HOME/.zsh -name \*.sh | sort); do
+		#echo "Init: $file"
+		source $file
+	done
+fi
+
 ## EOF
