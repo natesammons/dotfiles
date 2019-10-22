@@ -76,7 +76,7 @@ POWERLEVEL9K_CUSTOM_CHARGING_ICON="zsh_charging_icon"
 ## custom "proxy" icon for when a proxy is configured
 zsh_proxy_icon(){
   if [[ ! -z $HTTP_PROXY ]]; then
-	echo -n '\uf502'
+	echo -n '\uf983'
   fi
 }
 POWERLEVEL9K_CUSTOM_PROXY_ICON_BACKGROUND="black"
