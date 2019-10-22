@@ -34,7 +34,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 ## left/right status segments
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir_writable dir vcs newline context)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_proxy_icon root_indicator dir_writable dir vcs newline context)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time battery custom_charging_icon)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
@@ -72,6 +72,16 @@ zsh_charging_icon(){
 POWERLEVEL9K_CUSTOM_CHARGING_ICON_BACKGROUND="black"
 POWERLEVEL9K_CUSTOM_CHARGING_ICON_FOREGROUND="red3"
 POWERLEVEL9K_CUSTOM_CHARGING_ICON="zsh_charging_icon"
+
+## custom "proxy" icon for when a proxy is configured
+zsh_proxy_icon(){
+  if [[ ! -z $HTTP_PROXY ]]; then
+	echo -n '\uf502'
+  fi
+}
+POWERLEVEL9K_CUSTOM_PROXY_ICON_BACKGROUND="black"
+POWERLEVEL9K_CUSTOM_PROXY_ICON_FOREGROUND="red3"
+POWERLEVEL9K_CUSTOM_PROXY_ICON="zsh_proxy_icon"
 
 ###############################################################################
 
