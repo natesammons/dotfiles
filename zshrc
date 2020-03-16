@@ -34,7 +34,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 ## left/right status segments
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_proxy_icon root_indicator dir_writable dir vcs newline context)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_proxy_icon root_indicator dir_writable dir vcs kubecontext newline context)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time battery custom_charging_icon)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
