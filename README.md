@@ -68,16 +68,16 @@ compaudit | xargs chmod g-w
 See [this stackexchange.com thread](https://unix.stackexchange.com/questions/383365/zsh-compinit-insecure-directories-run-compaudit-for-list) for details.
 
 
-# 3. Install the SourceCodePro "NerdFont" font
+# 3. Install the FiraCode "Nerd Font" font
 
 [https://nerdfonts.com/](https://nerdfonts.com/)
 
-Go to Downloads -> SourceCodePro -> open zip file
+```
+brew tap homebrew/cask-fonts
+brew cask install font-firacode-nerd-font
+```
 
-Use “`Sauce Code Pro Medium Nerd Font Complete.ttf`” (specifically NOT the ‘mono’ version).
-If you use the mono version, the icons will be too small.  The font is already monospaced.
-
-Download the raw file, open it and install the font.  Change your iTerm profile to use this font.
+Open the FontBook app, and it should show up under user fonts.  Select this as the font to use in iTerm.
 
 # 4. Make `zsh` your default shell
 

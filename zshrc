@@ -28,9 +28,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # getColorCode background
 # getColorCode foreground
 
-## Use "SourceCodePro Nerd Font" (not the 'mono' version)
+## Use "Nerd Font" -- install FiraCode (explicitly not the 'mono' version)
 # from https://nerdfonts.com/
-# 'Sauce Code Pro Nerd Font Complete.ttf'
+# $ brew tap homebrew/cask-fonts
+# $ brew cask install font-firacode-nerd-font
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 ## left/right status segments
