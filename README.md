@@ -161,8 +161,10 @@ It should look like the screenshot above
 
 *  `brew update`
 *  `brew upgrade`
-*  `(cd ~/.vim/bundle/Vundle.vim; git pull)`
-*  `(cd ~/.dotfiles; git pull)`
+*  `git -C ~/.oh-my-zsh pull`
+*  `git -C ~/.oh-my-zsh/custom/themes/powerlevel10k pull`
+*  `git -C ~/.vim/bundle/Vundle.vim pull`
+*  `git -C ~/.dotfiles pull`
 *  `vim +PluginUpdate +qall`
 
 # 11. Customize
