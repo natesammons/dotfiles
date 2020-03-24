@@ -157,7 +157,15 @@ vim +PluginInstall +qall
 
 It should look like the screenshot above
 
-# 10. Customize
+# 10. Updates
+
+*  `brew update`
+*  `brew upgrade`
+*  `(cd ~/.vim/bundle/Vundle.vim; git pull)`
+*  `(cd ~/.dotfiles; git pull)`
+*  `vim +PluginUpdate +qall`
+
+# 11. Customize
 
 This config runs files named `*.sh` in each of the following directories after setting everything else:
 
