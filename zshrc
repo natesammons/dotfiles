@@ -165,12 +165,19 @@ unalias ls
 alias ls='ls --color=auto -CF'
 alias ll='ls --color=auto -CFlh'
 
-## run local bits if there's a ~/.zsh.d directory
-if [[ -d $HOME/.zsh.d ]]; then
-	for file in $(find $HOME/.zsh.d -name \*.sh | sort); do
-		#echo "Init: $file"
-		source $file
-	done
-fi
+## Run extension files in the following dirs:
+##  $HOME/.zsh.d
+##  $HOME/.zsh.d.$USER
+##  $HOME/.zsh.d/$(hostname -s)
+##
+## Run things in alphabetic order by filename
+for dir in $HOME/.zsh.d $HOME/.zsh.d.$USER $HOME/.zsh.d.$(hostname -s); do
+	if [[ -d $dir ]]; then
+		for file in $(find $dir -name \*.sh | sort); do
+			#echo "Init: $file"
+			source "$file"
+		done
+	fi
+done
 
 ## EOF
