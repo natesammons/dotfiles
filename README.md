@@ -169,7 +169,7 @@ It should look like the screenshot above
 
 # 11. Customize
 
-This config runs files named `*.sh` in each of the following directories after setting everything else:
+The [`.zshrc`](zshrc) config sources files named `*.sh` in each of the following directories after setting everything else:
 
 * `~/.zsh.d`
 * `~/.zsh.d.${USER}`
