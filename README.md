@@ -159,7 +159,7 @@ It should look like the screenshot above
 
 # 10. Customize
 
-This conig runs files named `*.sh` in each of the following directories after setting everything else:
+This config runs files named `*.sh` in each of the following directories after setting everything else:
 
 * `~/.zsh.d`
 * `~/.zsh.d.${USER}`
