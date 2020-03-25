@@ -159,13 +159,15 @@ It should look like the screenshot above
 
 # 10. Updates
 
-*  `brew update`
-*  `brew upgrade`
-*  `git -C ~/.oh-my-zsh pull`
-*  `git -C ~/.oh-my-zsh/custom/themes/powerlevel10k pull`
-*  `git -C ~/.vim/bundle/Vundle.vim pull`
-*  `git -C ~/.dotfiles pull`
-*  `vim +PluginUpdate +qall`
+```bash
+brew update
+brew upgrade
+git -C ~/.oh-my-zsh pull
+git -C ~/.oh-my-zsh/custom/themes/powerlevel10k pull
+git -C ~/.vim/bundle/Vundle.vim pull
+git -C ~/.dotfiles pull
+vim +PluginUpdate +qall
+```
 
 # 11. Customize
 
