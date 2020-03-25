@@ -174,9 +174,9 @@ vim +PluginUpdate +qall
 
 The [`.zshrc`](zshrc) config sources files named `*.sh` in each of the following directories after setting everything else:
 
-* `~/.zsh.d`
-* `~/.zsh.d.${USER}`
-* `~/.zsh.d.$(hostname -s)`
+1. `~/.zsh.d`
+1. `~/.zsh.d.${USER}`
+1. `~/.zsh.d.$(hostname -s)`
 
 Files in each of these directories are run in alphabetic order (using `sort` on filenames)
 
