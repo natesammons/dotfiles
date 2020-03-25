@@ -157,7 +157,19 @@ vim +PluginInstall +qall
 
 It should look like the screenshot above
 
-# 10. Updates
+# 10. Customize
+
+The [`.zshrc`](zshrc) config sources files named `*.sh` in each of the following directories after setting everything else:
+
+1. `~/.zsh.d`
+1. `~/.zsh.d.$USER`
+1. `~/.zsh.d.$(hostname -s)`
+
+Files in each of these directories are run in alphabetic order (using `sort` on filenames)
+
+# 11. Updates
+
+Update everything by running the following commands:
 
 ```bash
 brew update
@@ -169,15 +181,5 @@ git -C ~/.vim/bundle/Vundle.vim pull
 git -C ~/.dotfiles pull
 vim +PluginUpdate +qall
 ```
-
-# 11. Customize
-
-The [`.zshrc`](zshrc) config sources files named `*.sh` in each of the following directories after setting everything else:
-
-1. `~/.zsh.d`
-1. `~/.zsh.d.${USER}`
-1. `~/.zsh.d.$(hostname -s)`
-
-Files in each of these directories are run in alphabetic order (using `sort` on filenames)
 
 
