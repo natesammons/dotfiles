@@ -1,0 +1,16 @@
+##
+## git config --global core.excludesfile ~/.dotfiles/global.gitignore
+##
+
+## OS items
+/**/.DS_Store
+/**/.DS_Store?
+/**/._*
+/**/.Spotlight-V100
+/**/.Trashes
+/**/ehthumbs.db
+/**/Thumbs.db
+
+## IntelliJ
+/**/.idea/**
+
