@@ -142,8 +142,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Replaces these files in your home dir with symlinks to these files.
 
 ```bash
-cd ~/.dotfiles
-bash ./create-links.sh
+zsh ~/.dotfiles/init.sh
 ```
 
 # 8. Run `vim` to initialize newly-configured plugins
