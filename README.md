@@ -184,4 +184,9 @@ zsh ~/.dotfiles/init.sh
 vim +PluginUpdate +qall
 ```
 
+You can also just run the `update.sh` script:
+
+```bash
+zsh ~/.dotfiles/update.sh
+```
 
