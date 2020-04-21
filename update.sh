@@ -16,3 +16,13 @@ vim +PluginUpdate +qall
 echo "Updating dotfiles"
 git -C ~/.dotfiles pull
 zsh ~/.dotfiles/init.sh
+
+## run update.sh in other dirs
+for dir in $HOME/.zsh.d $HOME/.zsh.d.$USER $HOME/.zsh.d.$(hostname -s); do
+	if [[ -f $dir/update.sh ]]; then
+		echo "Running update.sh in $dir"
+		( cd $dir; zsh ./update.sh )
+	fi
+done
+
+
