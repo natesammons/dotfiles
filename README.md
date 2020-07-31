@@ -30,32 +30,10 @@ Follow the instructions at [https://brew.sh/](https://brew.sh/)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### Install Core Tools
+### Install Brew Packages
 
 ```bash
-brew install coreutils
-brew install findutils
-brew install gnu-indent
-brew install gnu-sed
-brew install gnutls
-brew install grep
-brew install gnu-tar
-brew install gawk
-brew install diffutils
-brew install gnu-which
-brew install gzip
-brew install wget
-brew install less
-brew install openssh
-brew install rsync
-brew install vim
-brew install htop
-brew install watch
-brew install zstd
-brew install awscli
-brew install zsh
-brew install zsh-syntax-highlighting
-brew install zsh-completions
+bash ~/.dotfiles/brew_install.sh
 ```
 
 ### Fix `zsh-completions` permissions
@@ -77,16 +55,9 @@ compaudit | xargs chmod g-w
 See [this stackexchange.com thread](https://unix.stackexchange.com/questions/383365/zsh-compinit-insecure-directories-run-compaudit-for-list) for details.
 
 
-## 3. Install the FiraCode "Nerd Font" font
+## 3. Setup iTerm Font
 
-[https://nerdfonts.com/](https://nerdfonts.com/)
-
-```bash
-brew tap homebrew/cask-fonts
-brew cask install font-firacode-nerd-font
-```
-
-Open the FontBook app, and it should show up under user fonts.  Select this as the font to use in iTerm.
+Above we installed the "FiraCode NerdFont" using brew.  Select it in iTerm as your font.
 
 ## 4. Make `zsh` your default shell
 
@@ -170,20 +141,6 @@ Files in each of these directories are run in alphabetic order (using `sort` on 
 # 11. Updates
 
 Update everything by running the following commands:
-
-```bash
-brew update
-brew upgrade
-brew cask upgrade
-git -C ~/.oh-my-zsh pull
-git -C ~/.oh-my-zsh/custom/themes/powerlevel10k pull
-git -C ~/.vim/bundle/Vundle.vim pull
-vim +PluginUpdate +qall
-git -C ~/.dotfiles pull
-zsh ~/.dotfiles/init.sh
-```
-
-You can also just run the `update.sh` script:
 
 ```bash
 zsh ~/.dotfiles/update.sh
