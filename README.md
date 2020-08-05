@@ -97,7 +97,7 @@ This will nuke your `.zshrc` so don’t make changes before installing it.  Run 
 ```bash
 git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 ```
-Powerlevel10K is a [Powerlevel9k](https://github.com/bhilburn/powerlevel9k) re-implementation
+[Powerlevel10K](https://github.com/romkatv/powerlevel10k) is a [Powerlevel9k](https://github.com/bhilburn/powerlevel9k) re-implementation
 that is a lot faster.
 
 ## 6. Install `Vundle` plugin for `vim`
