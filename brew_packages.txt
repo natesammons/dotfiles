@@ -85,7 +85,6 @@ perl
 pkg-config
 popt
 protobuf
-pulumi
 python@3.8
 readline
 rsync
