@@ -161,3 +161,9 @@ let g:ale_sign_warning = '⚠'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
 
+" Set 2 space tabs
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
