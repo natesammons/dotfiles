@@ -31,7 +31,6 @@ htop
 icu4c
 ilmbase
 imagemagick
-jenv
 jpeg
 jq
 k9s
