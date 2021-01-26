@@ -3,7 +3,7 @@ cd $HOME
 echo "Updating homebrew"
 brew update
 brew upgrade
-brew cask upgrade
+brew upgrade --cask
 
 echo "Updating OMZ, Powerlevel10K"
 git -C ~/.oh-my-zsh pull
