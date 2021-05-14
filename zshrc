@@ -9,24 +9,29 @@ elif [[ -x $HOME/homebrew/bin/brew ]]; then
   export BREW_HOME=$( $HOME/homebrew/bin/brew --prefix )
 else
   echo ""
-  echo "Unable to figure out where brew is installed! Fix your ~/.zshrc"
+  echo "Unable to figure out where brew is installed! Fix in ~/.zshrc"
   echo ""
 fi
 
-## add brew's bin and sbin
-export PATH="${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:${PATH}"
+## add brew's bin and sbin if it's not in /usr/local
+if [[ $BREW_HOME != "/usr/local" ]]; then
+  export PATH="${BREW_HOME}/bin:${BREW_HOME}/sbin:${PATH}"
+fi
 
 ## add various brew "non-g" binaries to the head of the path
 for bindir in $( find $BREW_HOME -type d -name gnubin ); do
   export PATH="$bindir:${PATH}"
 done
 
-## still add /usr/local/bin
+## add /usr/local/bin and sbin
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # man page paths
 export MANPATH="/usr/local/share/man:$MANPATH"
-export MANPATH="$BREW_HOME/share/man:$MANPATH"
+if [[ $BREW_HOME != "/usr/local" ]]; then
+  export MANPATH="$BREW_HOME/share/man:$MANPATH"
+fi
 
 ## update path completions paths before oh-my-zsh inits
 fpath=(
