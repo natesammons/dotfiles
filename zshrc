@@ -1,19 +1,37 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+## ZSHRC
+
+## figure out where brew is installed
+if [[ -x /usr/local/bin/brew ]]; then
+  export BREW_HOME=$( /usr/local/bin/brew --prefix )
+elif [[ -x $HOME/.homebrew/bin/brew ]]; then
+  export BREW_HOME=$( $HOME/.homebrew/bin/brew --prefix )
+elif [[ -x $HOME/homebrew/bin/brew ]]; then
+  export BREW_HOME=$( $HOME/homebrew/bin/brew --prefix )
+else
+  echo ""
+  echo "Unable to figure out where brew is installed! Fix your ~/.zshrc"
+  echo ""
+fi
+
+## add brew's bin and sbin
+export PATH="${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:${PATH}"
 
 ## add various brew "non-g" binaries to the head of the path
-for lib in $( ls -1 /usr/local/opt ); do
-  export PATH="/usr/local/opt/$lib/libexec/gnubin:$PATH"
+for bindir in $( find $BREW_HOME -type d -name gnubin ); do
+  export PATH="$bindir:${PATH}"
 done
+
+## still add /usr/local/bin
 export PATH="/usr/local/bin:$PATH"
 
 # man page paths
 export MANPATH="/usr/local/share/man:$MANPATH"
+export MANPATH="$BREW_HOME/share/man:$MANPATH"
 
 ## update path completions paths before oh-my-zsh inits
 fpath=(
-	/usr/local/share/zsh/site-functions
-	/usr/local/share/zsh-completions
+  $BREW_HOME/opt/zsh-completions
+  $BREW_HOME/share/zsh/site-functions
 	$fpath
 )
 
@@ -150,12 +168,15 @@ plugins=(
 )
 
 ## syntax hilighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $BREW_HOME/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ## run oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 ## source fuzzy-search init if present
+## if not present, run:
+##   brew install fzf
+##   $(brew --prefix)/opt/fzf/install
 if [[ -f ~/.fzf.zsh ]]; then
 	source ~/.fzf.zsh
 fi
@@ -186,5 +207,3 @@ for dir in $HOME/.zsh.d $HOME/.zsh.d.$USER $HOME/.zsh.d.$(hostname -s); do
 done
 
 ## EOF
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
