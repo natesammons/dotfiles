@@ -57,7 +57,10 @@ See [this stackexchange.com thread](https://unix.stackexchange.com/questions/383
 
 ## 3. Setup iTerm Font
 
-Above we installed the "FiraCode NerdFont" and "Meslo LGL NerdFont" using brew.  Select one of these in iTerm as your font.
+Above we installed the [FiraCode NerdFont](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode) using brew.  Another good one is [the nerd font patched SFMono](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized).
+
+Select one of these in iTerm as your font.
+
 
 ## 4. Make `zsh` your default shell
 
