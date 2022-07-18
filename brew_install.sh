@@ -8,7 +8,8 @@ brew install `cat brew_packages.txt`
 $(brew --prefix)/opt/fzf/install --no-update-rc --no-bash --all
 
 ## install some nice fonts
-brew tap homebrew/cask-fonts
-brew cask install font-firacode-nerd-font
-brew cask install font-meslo-lg-nerd-font
+## or just get these 
+#brew tap homebrew/cask-fonts
+#brew cask install font-firacode-nerd-font
+#brew cask install font-meslo-lg-nerd-font
 

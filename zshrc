@@ -1,7 +1,9 @@
 ## ZSHRC
 
 ## figure out where brew is installed
-if [[ -x /usr/local/bin/brew ]]; then
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  export BREW_HOME=$( /opt/homebrew/bin/brew --prefix )
+elif [[ -x /usr/local/bin/brew ]]; then
   export BREW_HOME=$( /usr/local/bin/brew --prefix )
 elif [[ -x $HOME/.homebrew/bin/brew ]]; then
   export BREW_HOME=$( $HOME/.homebrew/bin/brew --prefix )

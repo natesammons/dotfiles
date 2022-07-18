@@ -84,7 +84,6 @@ perl
 pkg-config
 popt
 protobuf
-python@3.8
 readline
 rsync
 ruby
